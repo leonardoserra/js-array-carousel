@@ -6,6 +6,7 @@ let thumbnailsContainerContent = "";
 
 console.log(imagesArray);
 for(let i = 0; i < imagesArray.length; i++){
+    
     let imagesListFiller = `<div class="image-wrapper"><img class="image" src="./img/0${imagesArray[i]}.webp" /></div>`;
     let thumbnailsContainerFiller = `<div class="thumbnail"><div class="overlay"></div><img class="miniature" src="./img/0${imagesArray[i]}.webp" /></div>`;
 
@@ -45,6 +46,7 @@ next.addEventListener('click',
             
 
             currentImage++;
+
             imageGroup[currentImage].classList.add('show');
             thumbnailGroup[currentImage].classList.add('selected')
             overlayGroup[currentImage].classList.add('noOverlay');
@@ -56,14 +58,14 @@ next.addEventListener('click',
             imageGroup[currentImage].classList.remove('show');
             thumbnailGroup[currentImage].classList.remove('selected')
             overlayGroup[currentImage].classList.remove('noOverlay');
+            
             currentImage = 0;
+           
             imageGroup[currentImage].classList.add('show');
             thumbnailGroup[currentImage].classList.add('selected')
             overlayGroup[currentImage].classList.add('noOverlay');
         }
         
-        
-
     }
 )
 
@@ -92,9 +94,6 @@ prev.addEventListener('click',
             overlayGroup[currentImage].classList.add('noOverlay');
 
         }
-
-        
-
 
     }
 )
