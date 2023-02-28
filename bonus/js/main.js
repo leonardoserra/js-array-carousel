@@ -45,17 +45,19 @@ next.addEventListener('click',
 
 prev.addEventListener('click',
     function(){
-        if(currentImage < imageGroup.length){
+        if(currentImage > 0){
             imageGroup[currentImage].classList.remove('show');
             currentImage--;
             imageGroup[currentImage].classList.add('show');
             next.classList.remove('hide');
             
+        } else if(currentImage == 0){
+            imageGroup[currentImage].classList.remove('show');
+            currentImage = imageGroup.length - 1;
+            imageGroup[currentImage].classList.add('show');
         }
 
-        if(currentImage == 0){
-            prev.classList.add('hide');
-        }
+        
 
 
     }
