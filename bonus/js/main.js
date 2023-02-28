@@ -23,21 +23,22 @@ const prev = document.querySelector('.prev');
 
 next.addEventListener('click',
     function(){
+
+        
+        
         if(currentImage < imageGroup.length - 1){
             imageGroup[currentImage].classList.remove('show');
             currentImage++;
             imageGroup[currentImage].classList.add('show');
             prev.classList.remove('hide');
             
-        }
-
-        if(currentImage == imageGroup.length -1){
+        }else if(currentImage == imageGroup.length - 1){
             imageGroup[currentImage].classList.remove('show');
-            console.log(currentImage);
             currentImage = 0;
             imageGroup[currentImage].classList.add('show');
         }
-
+        
+        
 
     }
 )
