@@ -41,7 +41,7 @@ next.addEventListener('click',
 
 prev.addEventListener('click',
     function(){
-        if(currentImage < imageGroup.length){
+        if(currentImage > 0){
             imageGroup[currentImage].classList.remove('show');
             currentImage--;
             imageGroup[currentImage].classList.add('show');
