@@ -73,6 +73,8 @@ i{
 }
 
 .thumbnails-container{
+    display: flex;
+    flex-direction: column-reverse;
     position: absolute;
     top: 0;
     right: 0;
@@ -99,12 +101,18 @@ i{
     bottom: 0;
     right: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.451);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.731);
+}
+
+.overlay.hide{
+    display: none;
 }
 
 
 .miniature{
     width: 100%;
+    object-fit: cover;
 }
 
 .selected{
