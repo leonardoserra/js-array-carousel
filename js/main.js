@@ -16,14 +16,44 @@ const imageGroup = document.getElementsByClassName('image-wrapper');
 
 console.log(imageGroup);
 
+let currentImage = 0;
+imageGroup[currentImage].classList.add('show');
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 
-// addEventListener.next('click',
-//     function(){
+next.addEventListener('click',
+    function(){
+        if(currentImage < imageGroup.length - 1){
+            imageGroup[currentImage].classList.remove('show');
+            currentImage++;
+            imageGroup[currentImage].classList.add('show');
+            prev.classList.remove('hide');
+            
+        }
+
+        if(currentImage == imageGroup.length - 1){
+            next.classList.add('hide');
+        }
 
 
-//     }
-// )
+    }
+)
 
+prev.addEventListener('click',
+    function(){
+        if(currentImage > imageGroup.length - 1){
+            imageGroup[currentImage].classList.remove('show');
+            currentImage--;
+            imageGroup[currentImage].classList.add('show');
+            next.classList.remove('hide');
+            
+        }
+
+        if(currentImage == 0){
+            prev.classList.add('hide');
+        }
+
+
+    }
+)
 
