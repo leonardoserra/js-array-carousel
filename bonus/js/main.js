@@ -18,11 +18,14 @@ imagesList.innerHTML = imagesListContent;
 thumbnailsContainer.innerHTML = thumbnailsContainerContent;
 
 const imageGroup = document.getElementsByClassName('image-wrapper');
+const thumbnailGroup = document.getElementsByClassName('thumbnail');
 
 console.log(imageGroup);
 
 let currentImage = 0;
 imageGroup[currentImage].classList.add('show');
+thumbnailGroup[currentImage].classList.add('selected');
+
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 
@@ -33,14 +36,18 @@ next.addEventListener('click',
         
         if(currentImage < imageGroup.length - 1){
             imageGroup[currentImage].classList.remove('show');
+            thumbnailGroup[currentImage].classList.remove('selected')
             currentImage++;
             imageGroup[currentImage].classList.add('show');
+            thumbnailGroup[currentImage].classList.add('selected')
             prev.classList.remove('hide');
             
         }else if(currentImage == imageGroup.length - 1){
             imageGroup[currentImage].classList.remove('show');
+            thumbnailGroup[currentImage].classList.remove('selected')
             currentImage = 0;
             imageGroup[currentImage].classList.add('show');
+            thumbnailGroup[currentImage].classList.add('selected')
         }
         
         
@@ -52,14 +59,18 @@ prev.addEventListener('click',
     function(){
         if(currentImage > 0){
             imageGroup[currentImage].classList.remove('show');
+            thumbnailGroup[currentImage].classList.remove('selected')
             currentImage--;
             imageGroup[currentImage].classList.add('show');
+            thumbnailGroup[currentImage].classList.add('selected')
             next.classList.remove('hide');
             
         } else if(currentImage == 0){
             imageGroup[currentImage].classList.remove('show');
+            thumbnailGroup[currentImage].classList.remove('selected')
             currentImage = imageGroup.length - 1;
             imageGroup[currentImage].classList.add('show');
+            thumbnailGroup[currentImage].classList.add('selected')
         }
 
         
