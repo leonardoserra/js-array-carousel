@@ -31,8 +31,11 @@ next.addEventListener('click',
             
         }
 
-        if(currentImage == imageGroup.length - 1){
-            next.classList.add('hide');
+        if(currentImage == imageGroup.length -1){
+            imageGroup[currentImage].classList.remove('show');
+            console.log(currentImage);
+            currentImage = 0;
+            imageGroup[currentImage].classList.add('show');
         }
 
 
