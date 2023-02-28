@@ -84,15 +84,16 @@ i{
 
 .thumbnail{
     height: calc(100% / 5);
-    position: relative;
     width: 100%;
+    position: relative;
     overflow-y: hidden;
     
 }
 
-.layover{
+.overlay{
     position: absolute;
-    z-index: 5;
+    z-index: 20;
+    display: block;
     top: 0;
     left: 0;
     bottom: 0;

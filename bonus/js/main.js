@@ -7,7 +7,7 @@ let thumbnailsContainerContent = "";
 console.log(imagesArray);
 for(let i = 0; i < imagesArray.length; i++){
     let imagesListFiller = `<div class="image-wrapper"><img class="image" src="./img/0${imagesArray[i]}.webp" /></div>`;
-    let thumbnailsContainerFiller = `<div class="thumbnail"><div class="layover"><img class="miniature" src="./img/0${imagesArray[i]}.webp" /></div></div>`;
+    let thumbnailsContainerFiller = `<div class="thumbnail"><div class="overlay"><img class="miniature" src="./img/0${imagesArray[i]}.webp" /></div></div>`;
 
     imagesListContent += imagesListFiller;
     thumbnailsContainerContent += thumbnailsContainerFiller;
@@ -19,7 +19,7 @@ thumbnailsContainer.innerHTML = thumbnailsContainerContent;
 
 const imageGroup = document.getElementsByClassName('image-wrapper');
 const thumbnailGroup = document.getElementsByClassName('thumbnail');
-const layoverGroup = document.getElementsByClassName('layover');
+const overlayGroup = document.getElementsByClassName('overlay');
 
 console.log(imageGroup);
 console.log(thumbnailGroup);
@@ -28,7 +28,7 @@ console.log(thumbnailGroup);
 let currentImage = 0;
 imageGroup[currentImage].classList.add('show');
 thumbnailGroup[currentImage].classList.add('selected');
-layoverGroup[currentImage].classList.remove('layover');
+overlayGroup[currentImage].classList.remove('overlay');
 
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
