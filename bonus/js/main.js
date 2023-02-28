@@ -1,16 +1,21 @@
 const imagesArray = [1, 2, 3, 4, 5];
 const imagesList = document.querySelector('.images-list');
-
+const thumbnailsContainer = document.querySelector('.thumbnails-container')
 let imagesListContent = "";
+let thumbnailsContainerContent = "";
 
 console.log(imagesArray);
 for(let i = 0; i < imagesArray.length; i++){
     let imagesListFiller = `<div class="image-wrapper"><img class="image" src="./img/0${imagesArray[i]}.webp" /></div>`;
+    let thumbnailsContainerFiller = `<div class="thumbnail"><img class="miniature" src="./img/0${imagesArray[i]}.webp" /></div>`;
+
     imagesListContent += imagesListFiller;
+    thumbnailsContainerContent += thumbnailsContainerFiller;
+
 }
 
 imagesList.innerHTML = imagesListContent;
-console.log(imagesListContent);
+thumbnailsContainer.innerHTML = thumbnailsContainerContent;
 
 const imageGroup = document.getElementsByClassName('image-wrapper');
 
