@@ -7,18 +7,27 @@
     <title>Carousel</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon.jpg" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     
     <div class="container">
+
         <div class="slider">
 
-            <div class="images-container">
+            <div class="images-list">
 
-                <div class="image-wrapper">
-
-                    <img class="d-none show" src="./img/01.webp" />
+                <div class="image-wrapper d-none">
+                    <img class="image" src="./img/01.webp" />
                 </div>
+                
+
+            </div>
+            <div class="next">
+                <i class="fa-solid fa-arrow-up"></i>
+            </div>
+            <div class="prev hide">
+                <i class="fa-solid fa-arrow-down"></i>
             </div>
             
         </div>
