@@ -28,7 +28,7 @@
 
 .image{
     object-fit: cover;
-    width: 100%;   
+    width: 100%;  
 }
 
 .show{
@@ -55,12 +55,15 @@
 .next{
     top: 10px;
 }
+
 .prev{
     bottom: 10px;
 }
+
 .next.hide{
     display: none;
 }
+
 .prev.hide{
     display: none;
 }
@@ -69,3 +72,10 @@ i{
     cursor: pointer;
 }
 
+.thumbnails-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid red;
+    height: 100%;
+}
