@@ -52,7 +52,7 @@ next.addEventListener('click',
             overlayGroup[currentImage].classList.add('noOverlay');
 
 
-            prev.classList.remove('hide');
+            
             
         }else if(currentImage == imageGroup.length - 1){
             imageGroup[currentImage].classList.remove('show');
